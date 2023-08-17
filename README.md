@@ -1,21 +1,20 @@
-# Fatality Analysis Reporting System (FARS) Dataset for Multiclass Classification
+# FARS Dataset for Multiclass Classification
 
 ## Overview
 
-The **Fatality Analysis Reporting System (FARS)** dataset provides comprehensive data on fatal injuries stemming from motor vehicle traffic crashes. The dataset is a culmination of a census, capturing fatal traffic accidents across all 50 U.S. states, the District of Columbia, and Puerto Rico. The information is meticulously collected from state data files annually and then coded by analysts at the National Highway Traffic Safety Administration (NHTSA).
+The **Fatality Analysis Reporting System (FARS)** dataset encompasses detailed data on fatal injuries resulting from motor vehicle traffic crashes. Originating as a census, this dataset comprehensively covers fatal traffic accidents from all 50 U.S. states, the District of Columbia, and Puerto Rico. Each year, the data is gathered from state data files and subsequently coded by analysts at the National Highway Traffic Safety Administration (NHTSA).
 
-This dataset serves as an invaluable tool in:
+The primary uses of this dataset include:
 
-- Analyzing the underlying causes and circumstances of motor vehicle traffic crashes.
-- Formulating effective crash countermeasures.
-- Procuring detailed insights on fatal crashes to guide the development, implementation, and evaluation of federal and state highway safety programs.
+- Examining the factors and contexts of motor vehicle traffic crashes.
+- Designing effective crash countermeasures.
+- Providing insights for the refinement and evaluation of federal and state highway safety programs.
 
 ## Data Source
 
-You can find more information about **FARS** at [https://www.nhtsa.gov/crash-data-systems/fatality-analysis-reporting-system](https://www.nhtsa.gov/crash-data-systems/fatality-analysis-reporting-system).
+You can find more information about **FARS** at https://www.nhtsa.gov/crash-data-systems/fatality-analysis-reporting-system.
 
-The dataset is extracted from here:  
-https://cdan.dot.gov/query
+The specific dataset can be extracted at https://cdan.dot.gov/query.
 
 ## Objective
 
@@ -27,13 +26,13 @@ This section delves into the process of gathering, refining, and defining our da
 
 ### Dataset Composition
 
-This dataset amalgamates information from three distinct sources:
+This dataset consolidates data from three separate sources:
 
 1. **Crash Data**: This encapsulates features pertinent to individual crash incidents. It includes details like the date and time of the crash, the manner of collision, the location of the accident (including region, state, latitude, longitude, etc.), and the type of roadway on which the accident occurred.
 
-2. **Vehicle Data**: This section offers insights into the vehicles implicated in the crash. It delves into aspects like the vehicle type, its make, and the model year.
+2. **Vehicle Data**: This data offers insights into the vehicles involved in the crash. It includes attributes such as the vehicle type, its make, and the model year.
 
-3. **Driver Data**: This subset presents features specifically linked to the drivers embroiled in these mishaps.
+3. **Driver Data**: This subset presents features specifically linked to the drivers involved in these accidents.
 
 ### Time Frame and Data Selection
 
@@ -45,8 +44,8 @@ The dataset covers data from 2016 to 2018 and includes crashes with the followin
 
 The rationale behind these criteria is as follows:
 
-- **Single-Vehicle Crashes**: Restricting our focus to single-vehicle crashes helps to accentuate the behaviors and decisions of one driver, without the confounding influence of other involved drivers.
-- **Driver Age**: While the legal driving age in most regions is 16 years or older, we included younger drivers down to the age of 13 to capture instances of underage driving that resulted in fatal outcomes. It's worth noting that the original dataset contained even younger drivers, some as young as 5 years old. However, we set a lower age limit to ensure the data represents more plausible real-world scenarios, while still acknowledging the reality of underage driving incidents.
+- **Single-Vehicle Crashes**: Limiting our data to single-vehicle crashes allows us to concentrate on the actions and decisions of one driver, eliminating potential variables introduced by other involved drivers.
+- **Driver Age**: While the legal driving age in most regions is 16 years or older, we included younger drivers down to the age of 13 to capture instances of underage driving that resulted in fatal outcomes. It's worth noting that the original dataset contained even younger drivers. However, we set a lower age limit to ensure the data represents more plausible real-world scenarios, while still acknowledging the reality of underage driving incidents.
 
 This dataset aims to provide a comprehensive view of fatal crashes, emphasizing the factors that might lead to such unfortunate events.
 
@@ -66,9 +65,9 @@ This systematic categorization aims to provide a clear distinction between the m
 
 To facilitate the model evaluation and ensure a robust understanding of the model's performance, the dataset is divided into training and testing subsets performed using random sampling. Specifically:
 
-- **Training Set**: Comprising 80% of the total samples, this subset will primarily be used for training machine learning models.
+- **Training Set**: Comprising 80% of the total samples, this subset is intended for training machine learning models.
 
-- **Test Set**: The remaining 20% of the samples are reserved for testing. Notably, the targets for this test set have been withheld to ensure unbiased evaluation. This approach ensures that the model's accuracy, precision, recall, and other performance metrics are assessed based on its predictions for unseen data.
+- **Test Set**: The remaining 20% of the samples are reserved for testing. Notably, the targets for this test set have been withheld to ensure unbiased evaluation.
 
 This random 80/20 split ensures that models are not overfitting to the data, and it offers a reliable evaluation metric for gauging their real-world performance.
 
@@ -185,7 +184,7 @@ The following is a list of features in the dataset, grouped by category.
   - `fars_schema.json`: Contains the schema for the dataset. Schema file follows the Ready Tensor specifications for schema files for multiclass classification tasks. See details of the schema specifications here: [https://docs.readytensor.ai/for-contributors/model-requirements/multiclass-classification#data-schema-and-input--output-formats](https://docs.readytensor.ai/for-contributors/model-requirements/multiclass-classification#data-schema-and-input--output-formats)
   - `fars_train.csv`: Contains the training data in CSV format. The file contains the target column.
   - `fars_test.csv`: Contains the test data in CSV format. The file does not contain the target column.
-  - `Fatality Analysis Reporting System Analytical User’s Manual, 1975-2021.pdf`: This is the original documentation for the dataset sourced directly from FARS. This manual contains more information on each of the features in the dataset.
+  - `Fatality Analysis Reporting System Analytical User’s Manual, 1975-2021.pdf`: This is the original documentation for the dataset sourced directly from FARS. This comprehensive manual contains more information on each of the features in the dataset.
 - `License.md`: Contains the license information for this project.
 - `README.md`: Provides an overview and detailed description of the project, including how to use and understand the dataset.
 
