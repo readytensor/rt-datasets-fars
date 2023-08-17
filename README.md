@@ -58,7 +58,7 @@ The process to generate this label is as follows:
 
 1. Crashes involving alcohol consumption, where the driver was found to have a Blood Alcohol Concentration above the legal limit, are labeled as `drunk driver involved`. This category takes precedence even if speeding or other factors influenced the crash.
 2. If the crash was not influenced by alcohol but driver was found to be speeding, it is labeled as `speeding_driver_involved`.
-3. Incidents that do not fall into the above categories, where neither alcohol nor speeding was involved, are labeled as 'other'.
+3. Incidents that do not fall into the above categories, where neither alcohol nor speeding was involved, are labeled as `other`.
 
 This systematic categorization aims to provide a clear distinction between the main factors leading to fatal vehicular incidents.
 
@@ -186,7 +186,7 @@ The following is a list of features in the dataset, grouped by category.
   - `fars_train.csv`: Contains the training data in CSV format. The file contains the target column.
   - `fars_test.csv`: Contains the test data in CSV format. The file does not contain the target column.
   - `Fatality Analysis Reporting System Analytical User’s Manual, 1975-2021.pdf`: This is the original documentation for the dataset sourced directly from FARS. This manual contains more information on each of the features in the dataset.
-- `.gitignore`: Lists files and directories that are not tracked by Git.
+- `License.md`: Contains the license information for this project.
 - `README.md`: Provides an overview and detailed description of the project, including how to use and understand the dataset.
 
 ## License
