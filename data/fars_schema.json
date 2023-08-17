@@ -1,0 +1,474 @@
+{
+  "title": "Fatality Analysis Reporting System Dataset",
+  "description": "Fatality Analysis Reporting System Dataset",
+  "modelCategory": "multiclass_classification",
+  "schemaVersion": 1.0,
+  "inputDataFormat": "CSV",
+  "id": {
+    "name": "u_id",
+    "description": "Unique identifier for the record"
+  },
+  "target": {
+    "name": "driver_factor",
+    "description": "Driver-related factor related to the crash, as expressed by the investigating officer",
+    "classes": [
+      "drunk_driver_involved",
+      "other",
+      "speeding_driver_involved"
+    ]
+  },
+  "features": [
+    {
+      "name": "fatals",
+      "description": "Number of fatalities in the event",
+      "dataType": "NUMERIC",
+      "example": 1,
+      "nullable": false
+    },
+    {
+      "name": "a_ct",
+      "description": "Type of crash: single, two-vehicle, more than 2 vehicle",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Single-Vehicle Crash"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_ped_f",
+      "description": "Whether pedestrian fatality involved in crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Other Crash",
+        "Pedestrian Fatality Involved Crash"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_pedal_f",
+      "description": "Whether pedalcyclist fatality involved in crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Other Crash",
+        "Pedalcyclist Fatality Involved Crash"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_roll",
+      "description": "Whether vehicle rollover involved in crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Other Crash",
+        "Rollover Involved Crash"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_hr",
+      "description": "Whether hit-and-run involved in crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "No - Hit and Run",
+        "Yes - Hit and Run"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_polpur",
+      "description": "Whether police pursuit involved in crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Other Crash",
+        "Police Pursuit Involved Crash"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "month",
+      "description": "Month of year when crash occurred",
+      "dataType": "NUMERIC",
+      "example": 8,
+      "nullable": false
+    },
+    {
+      "name": "day",
+      "description": "Day of month when crash occurred",
+      "dataType": "NUMERIC",
+      "example": 3,
+      "nullable": false
+    },
+    {
+      "name": "day_week",
+      "description": "Day of the week when crash occurred",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "fri",
+        "mon",
+        "sat",
+        "sun",
+        "thu",
+        "tue",
+        "wed"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "hour",
+      "description": "Hour of the day when crash occurred",
+      "dataType": "NUMERIC",
+      "example": 0.0,
+      "nullable": true
+    },
+    {
+      "name": "minute",
+      "description": "Minute in the hour when crash occurred",
+      "dataType": "NUMERIC",
+      "example": 40.0,
+      "nullable": true
+    },
+    {
+      "name": "a_dow_type",
+      "description": "Day of week type: weekday (M-F) or weekend (Sat-Sun)",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Weekday",
+        "Weekend"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_tod_type",
+      "description": "Time of day time: daytime (6 am to 6 pm), nighttime (6 pm to 6 am)",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Daytime",
+        "Nighttime"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "state",
+      "description": "State in which crash occurred",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "District of Columbia",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_region",
+      "description": "Region (made up of states) where crash occurred",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Alabama, Florida, Georgia, South Carolina, Tennessee",
+        "Alaska, Idaho, Montana, Oregon, Washington",
+        "Arizona, California, Hawaii",
+        "Arkansas, Iowa, Kansas, Missouri, Nebraska",
+        "Colorado, Nevada, North Dakota, South Dakota, Utah, Wyoming",
+        "Connecticut, New Jersey, New York, Pennsylvania",
+        "Delaware, District of Columbia, Kentucky, Maryland, North Carolina, Virginia, West Virginia",
+        "Illinois, Indiana, Michigan, Minnesota, Ohio, Wisconsin",
+        "Louisiana, Mississippi, New Mexico, Oklahoma, Texas",
+        "Maine, Massachusetts, New Hampshire, Rhode Island, Vermont"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_ru",
+      "description": "Rural or urban",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Rural",
+        "Urban"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "a_inter",
+      "description": "Whether crash occurred on Interstate highway",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Interstate",
+        "Non-Interstate"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "a_intsec",
+      "description": "Whether crash occurred at an intersection or not",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Intersection",
+        "Non-Intersection"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "a_roadfc",
+      "description": "Type of road (interstate, local, etc.)",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Interstate",
+        "Local",
+        "Major Collector",
+        "Minor Arterial",
+        "Minor Collector",
+        "Principal Arterial \u2013 Other",
+        "Principal Arterial \u2013 Other Freeways and Expressways"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "a_junc",
+      "description": "Identifies if crash occurred in or proximity to junction or interchange area of two or more roadways",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Junction",
+        "Non-Junction",
+        "Other"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "a_relrd",
+      "description": "Identifies area of roadway where crash occurred (on, off, shoulder, median, etc.)",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Off Roadway/Median",
+        "Off Roadway/Other",
+        "Off Roadway/Shoulder",
+        "On Roadway",
+        "Other/Unknown"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "age",
+      "description": "Age of driver",
+      "dataType": "NUMERIC",
+      "example": 25,
+      "nullable": false
+    },
+    {
+      "name": "permvit",
+      "description": "Number of persons in motor vehicles in-transport",
+      "dataType": "NUMERIC",
+      "example": 1,
+      "nullable": false
+    },
+    {
+      "name": "pernotmvit",
+      "description": "Number of persons not in motor vehicles in-transport",
+      "dataType": "NUMERIC",
+      "example": 0,
+      "nullable": false
+    },
+    {
+      "name": "a_ped",
+      "description": "Whether crash involved a pedestrian",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "no",
+        "yes"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "ve_forms",
+      "description": "Number of vehicle forms submitted for mv in transport",
+      "dataType": "NUMERIC",
+      "example": 1,
+      "nullable": false
+    },
+    {
+      "name": "ve_total",
+      "description": "Number of vehicle forms submitted",
+      "dataType": "NUMERIC",
+      "example": 1,
+      "nullable": false
+    },
+    {
+      "name": "mod_year",
+      "description": "Vehicle model year",
+      "dataType": "NUMERIC",
+      "example": 2014.0,
+      "nullable": true
+    },
+    {
+      "name": "a_body",
+      "description": "Vehicle body type (automobile, light trucks, mediu/high trucks, buses, etc.)",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Automobiles",
+        "Buses",
+        "Light Conventional Trucks",
+        "Medium/Heavy Trucks",
+        "Motorcycles, Mopeds, All-Terrain Vehicles; All-Terrain Cycles",
+        "Other Light Trucks",
+        "Other Vehicles",
+        "Utility Vehicles",
+        "Van-Based Light Trucks"
+      ],
+      "nullable": false
+    },
+    {
+      "name": "owner",
+      "description": "Type of registered owner of vehicle in crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Driver (in this crash) Not Registered Owner (other private owner listed)",
+        "Driver (in this crash) Was Registered Owner",
+        "Not Applicable, Vehicle Not Registered",
+        "Vehicle Registered as Business/Company/Government Vehicle",
+        "Vehicle Registered as Rental Vehicle",
+        "Vehicle Was Stolen (reported by police)"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "deaths",
+      "description": "Number of fatalities in vehicle",
+      "dataType": "NUMERIC",
+      "example": 1,
+      "nullable": false
+    },
+    {
+      "name": "numoccs",
+      "description": "Number of motor vehicle occupants",
+      "dataType": "NUMERIC",
+      "example": 1.0,
+      "nullable": true
+    },
+    {
+      "name": "impact1",
+      "description": "Areas of impact - initial contact point",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Cargo/Vehicle parts set-in-motion",
+        "Clockpoint 1",
+        "Clockpoint 10",
+        "Clockpoint 11",
+        "Clockpoint 12",
+        "Clockpoint 2",
+        "Clockpoint 3",
+        "Clockpoint 4",
+        "Clockpoint 5",
+        "Clockpoint 6",
+        "Clockpoint 7",
+        "Clockpoint 8",
+        "Clockpoint 9",
+        "Left",
+        "Left-back side",
+        "Left-front side",
+        "Non-Collision",
+        "Object set-in-motion, unknown if cargo/vehicle parts or other",
+        "Other objects set-in-motion",
+        "Right-back side",
+        "Right-front side",
+        "Rigt",
+        "Top",
+        "Undercarriage"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "deformed",
+      "description": "Extent of damage to vehicle",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Disabling damage",
+        "Functional damage",
+        "Minor damage",
+        "No damage"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "weather",
+      "description": "Prevailing atmospheric conditions that existed at the time of the crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Blowing sand, soil, dirt",
+        "Blowing snow",
+        "Clear",
+        "Cloudy",
+        "Fog, smog, smoke",
+        "Freezing rain or drizzle",
+        "Other",
+        "Rain",
+        "Reported as unknown",
+        "Severe crosswinds",
+        "Sleet or hail",
+        "Snow"
+      ],
+      "nullable": true
+    },
+    {
+      "name": "lgt_cond",
+      "description": "Type/level of light that existed at the time of the crash",
+      "dataType": "CATEGORICAL",
+      "categories": [
+        "Dark - lighted",
+        "Dark - not lighted",
+        "Dark - unknown lighting",
+        "Dawn",
+        "Daylight",
+        "Dusk",
+        "Other",
+        "Reported as unknown"
+      ],
+      "nullable": true
+    }
+  ]
+}
