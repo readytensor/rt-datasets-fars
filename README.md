@@ -22,7 +22,7 @@ The core aim of this dataset is to enable predictions on the predominant factors
 
 ## Data Preparation and Description
 
-This section delves into the process of gathering, refining, and defining our dataset, from raw data acquisition at the NHTSA site to the finalized, purpose-built dataset.
+This section describes the process of gathering, refining, and defining our dataset, from raw data acquisition at the NHTSA site to the finalized, purpose-built dataset.
 
 ### Dataset Composition
 
