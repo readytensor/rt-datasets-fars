@@ -45,7 +45,7 @@ The dataset covers data from 2016 to 2018 and includes crashes with the followin
 The rationale behind these criteria is as follows:
 
 - **Single-Vehicle Crashes**: Limiting our data to single-vehicle crashes allows us to concentrate on the actions and decisions of one driver, eliminating potential variables introduced by other involved drivers.
-- **Driver Age**: While the legal driving age in most regions is 16 years or older, we included younger drivers down to the age of 13 to capture instances of underage driving that resulted in fatal outcomes. It's worth noting that the original dataset contained even younger drivers. However, we set a lower age limit to ensure the data represents more plausible real-world scenarios, while still acknowledging the reality of underage driving incidents.
+- **Driver Age**: Although the legal driving age in most regions starts at 16, we've included drivers as young as 13 to capture instances of underage driving with fatal consequences. While the original dataset included even younger drivers, we established this age threshold to represent more typical real-world scenarios, yet still address the reality of underage driving incidents.
 
 This dataset aims to provide a comprehensive view of fatal crashes, emphasizing the factors that might lead to such unfortunate events.
 
