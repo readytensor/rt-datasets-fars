@@ -1,7 +1,7 @@
 {
   "title": "Fatality Analysis Reporting System Dataset",
   "description": "Fatality Analysis Reporting System Dataset",
-  "modelCategory": "multiclass_classification",
+  "modelCategory": "multiclass_classification_usd_2023",
   "schemaVersion": 1.0,
   "inputDataFormat": "CSV",
   "id": {
@@ -27,7 +27,7 @@
     },
     {
       "name": "a_ct",
-      "description": "Type of crash: single, two-vehicle, more than 2 vehicle",
+      "description": "type of crash: single, two-vehicle, more than 2 vehicle",
       "dataType": "CATEGORICAL",
       "categories": [
         "Single-Vehicle Crash"
@@ -302,7 +302,7 @@
     },
     {
       "name": "permvit",
-      "description": "Number of persons in motor vehicles in-transport",
+      "description": "Number of persons in motor vehicles in-transpor",
       "dataType": "NUMERIC",
       "example": 1,
       "nullable": false
