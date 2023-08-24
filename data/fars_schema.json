@@ -1,7 +1,7 @@
 {
   "title": "Fatality Analysis Reporting System Dataset",
   "description": "Fatality Analysis Reporting System Dataset",
-  "modelCategory": "multiclass_classification_usd_2023",
+  "modelCategory": "multiclass_classification",
   "schemaVersion": 1.0,
   "inputDataFormat": "CSV",
   "id": {
@@ -11,11 +11,7 @@
   "target": {
     "name": "driver_factor",
     "description": "Driver-related factor related to the crash, as expressed by the investigating officer",
-    "classes": [
-      "drunk_driver_involved",
-      "other",
-      "speeding_driver_involved"
-    ]
+    "classes": ["drunk_driver_involved", "other", "speeding_driver_involved"]
   },
   "features": [
     {
@@ -29,59 +25,42 @@
       "name": "a_ct",
       "description": "type of crash: single, two-vehicle, more than 2 vehicle",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Single-Vehicle Crash"
-      ],
+      "categories": ["Single-Vehicle Crash"],
       "nullable": false
     },
     {
       "name": "a_ped_f",
       "description": "Whether pedestrian fatality involved in crash",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Other Crash",
-        "Pedestrian Fatality Involved Crash"
-      ],
+      "categories": ["Other Crash", "Pedestrian Fatality Involved Crash"],
       "nullable": false
     },
     {
       "name": "a_pedal_f",
       "description": "Whether pedalcyclist fatality involved in crash",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Other Crash",
-        "Pedalcyclist Fatality Involved Crash"
-      ],
+      "categories": ["Other Crash", "Pedalcyclist Fatality Involved Crash"],
       "nullable": false
     },
     {
       "name": "a_roll",
       "description": "Whether vehicle rollover involved in crash",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Other Crash",
-        "Rollover Involved Crash"
-      ],
+      "categories": ["Other Crash", "Rollover Involved Crash"],
       "nullable": false
     },
     {
       "name": "a_hr",
       "description": "Whether hit-and-run involved in crash",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "No - Hit and Run",
-        "Yes - Hit and Run"
-      ],
+      "categories": ["No - Hit and Run", "Yes - Hit and Run"],
       "nullable": false
     },
     {
       "name": "a_polpur",
       "description": "Whether police pursuit involved in crash",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Other Crash",
-        "Police Pursuit Involved Crash"
-      ],
+      "categories": ["Other Crash", "Police Pursuit Involved Crash"],
       "nullable": false
     },
     {
@@ -102,15 +81,7 @@
       "name": "day_week",
       "description": "Day of the week when crash occurred",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "fri",
-        "mon",
-        "sat",
-        "sun",
-        "thu",
-        "tue",
-        "wed"
-      ],
+      "categories": ["fri", "mon", "sat", "sun", "thu", "tue", "wed"],
       "nullable": false
     },
     {
@@ -131,20 +102,14 @@
       "name": "a_dow_type",
       "description": "Day of week type: weekday (M-F) or weekend (Sat-Sun)",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Weekday",
-        "Weekend"
-      ],
+      "categories": ["Weekday", "Weekend"],
       "nullable": false
     },
     {
       "name": "a_tod_type",
       "description": "Time of day time: daytime (6 am to 6 pm), nighttime (6 pm to 6 am)",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Daytime",
-        "Nighttime"
-      ],
+      "categories": ["Daytime", "Nighttime"],
       "nullable": true
     },
     {
@@ -228,30 +193,21 @@
       "name": "a_ru",
       "description": "Rural or urban",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Rural",
-        "Urban"
-      ],
+      "categories": ["Rural", "Urban"],
       "nullable": true
     },
     {
       "name": "a_inter",
       "description": "Whether crash occurred on Interstate highway",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Interstate",
-        "Non-Interstate"
-      ],
+      "categories": ["Interstate", "Non-Interstate"],
       "nullable": true
     },
     {
       "name": "a_intsec",
       "description": "Whether crash occurred at an intersection or not",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Intersection",
-        "Non-Intersection"
-      ],
+      "categories": ["Intersection", "Non-Intersection"],
       "nullable": true
     },
     {
@@ -273,11 +229,7 @@
       "name": "a_junc",
       "description": "Identifies if crash occurred in or proximity to junction or interchange area of two or more roadways",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "Junction",
-        "Non-Junction",
-        "Other"
-      ],
+      "categories": ["Junction", "Non-Junction", "Other"],
       "nullable": true
     },
     {
@@ -318,10 +270,7 @@
       "name": "a_ped",
       "description": "Whether crash involved a pedestrian",
       "dataType": "CATEGORICAL",
-      "categories": [
-        "no",
-        "yes"
-      ],
+      "categories": ["no", "yes"],
       "nullable": false
     },
     {
