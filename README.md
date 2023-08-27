@@ -184,6 +184,8 @@ The following is a list of features in the dataset, grouped by category.
   - `fars_schema.json`: Contains the schema for the dataset. Schema file follows the Ready Tensor specifications for schema files for multiclass classification tasks. See details of the schema specifications here: [https://docs.readytensor.ai/for-contributors/model-requirements/multiclass-classification#data-schema-and-input--output-formats](https://docs.readytensor.ai/for-contributors/model-requirements/multiclass-classification#data-schema-and-input--output-formats)
   - `fars_train.csv`: Contains the training data in CSV format. The file contains the target column.
   - `fars_test.csv`: Contains the test data in CSV format. The file does not contain the target column.
+  - `fars_smoke_test_train.csv`: Contains the smaller (10%) subset of training data in CSV format. It can be used during model development for quick testing. It uses the same schema file as the main data.
+  - `fars_smoke_test_test.csv`: Contains the smaller (10%) subset of test data in CSV format. Note that it is extracted from the train set (i.e. from data in `fars_train.csv`). So targets for this small test set can be found in the training data. This file can be used during model development for quick testing. It uses the same schema file as the main data.
 - `docs/`: Contains the documentation for the dataset.
   - `Fatality Analysis Reporting System Analytical User’s Manual, 1975-2021.pdf`: This is the original documentation for the dataset sourced directly from FARS. This comprehensive manual contains more information on each of the features in the dataset.
 - `License.md`: Contains the license information for this project.
